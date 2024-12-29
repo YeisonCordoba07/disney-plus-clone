@@ -20,7 +20,7 @@ function NavBar() {
 
       </ul>
 
-      <div className="nav__account-options" onClick={() => setShowOptions(!showOptions)}>
+      <div className={showOptions ? " nav__account-options nav__account-options--active" : "nav__account-options"} onClick={() => setShowOptions(!showOptions)}>
         <div className="nav__current-account">
           <span className="nav__current-account__name">YEISON</span>
           <img className="nav__current-account-image" src="https://randomuser.me/api/portraits/women/75.jpg" alt="" />
