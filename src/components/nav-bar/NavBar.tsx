@@ -3,6 +3,7 @@ import {useState} from "react";
 
 function NavBar() {
   const [showOptions, setShowOptions] = useState<boolean>(false);
+
   return (
     <nav className="nav">
       <ul className="nav__elements-list">
@@ -20,14 +21,17 @@ function NavBar() {
 
       </ul>
 
-      <div className={showOptions ? " nav__account-options nav__account-options--active" : "nav__account-options"} onClick={() => setShowOptions(!showOptions)}>
+      <div
+        className={showOptions ? "nav__account-options nav__account-options--active" : "nav__account-options"}
+        onClick={() => setShowOptions(!showOptions)}>
+
         <div className="nav__current-account">
           <span className="nav__current-account__name">YEISON</span>
           <img className="nav__current-account-image" src="https://randomuser.me/api/portraits/women/75.jpg" alt="" />
         </div>
 
 
-        <div className={showOptions ? "hidden-menu--active" : "hidden-menu"}>
+        <div className={showOptions ? "hidden-menu--active hidden-menu" : "hidden-menu"}>
 
           <div className="hidden-menu__other-accounts-container">
             <div className="nav__current-account">

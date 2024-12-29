@@ -9,7 +9,7 @@ function NavElement({text, src = "nav-icons/tv-icon.svg"}: Props){
 
             <img className="nav-element__svg" src={src} alt="nav icon"/>
                
-            <span className="nav-element__text">{text}</span>
+            <span className="nav-element__text">{text.toUpperCase()}</span>
             
         </div>
     );

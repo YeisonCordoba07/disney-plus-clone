@@ -1,3 +1,7 @@
+$hidden-menu-background: #141414;
+$hidden-menu-color-border: #2c2c2c;
+
+
 .nav {
   display: flex;
   gap: 20px;
@@ -14,11 +18,12 @@
     justify-content: center;
     align-items: center;
   }
-  &__elements-list--active{
+
+  &__elements-list--active {
 
   }
 
-  &__home-button{
+  &__home-button {
     margin-right: 32px;
   }
 
@@ -28,55 +33,86 @@
   }
 
 
-
-  &__account-options{
-    background-color: green;
+  &__account-options {
+    background-color: inherit;
     padding: 16px;
     width: 240px;
-    &--active{
-      background-color: orange;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    transition-property: height;
+
+
+    &--active {
+      background-color: $hidden-menu-background;
+      border: 1px solid $hidden-menu-color-border;
+      border-top: none;
+      border-bottom: none;
     }
 
   }
 
 
-  &__current-account{
+  &__current-account {
     display: flex;
     gap: 16px;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 
-    &-image{
+    &-image {
       width: 48px;
       height: 48px;
       border-radius: 50%;
     }
 
-    &-name{
+    &-name {
 
     }
   }
 
 }
 
-.hidden-menu{
 
-    display: none;
 
-  &--active{
+.hidden-menu {
+  visibility: hidden;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-property: height;
+  height: 0;
+
+  background-color: inherit;
+  position: absolute;
+  gap: 20px;
+  flex-direction: column;
+  padding: 16px;
+  top: 80px;
+  right: 37px;
+  width: 240px;
+  border-radius: 0 0 4px 4px;
+
+  border: 1px solid $hidden-menu-color-border;
+  border-top: none;
+
+
+  &--active {
     display: flex;
-    background-color: inherit;
-    position: absolute;
-    gap: 16px;
-    flex-direction: column;
-    padding: 16px;
-    top: 80px;
-    right: 37px;
-    width: 240px;
+    visibility: visible;
+    height: 350px;
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      border: 1px solid #232323;
+
+      top: 0;
+      left: 20px;
+      right: 20px;
+    }
   }
 
 
-  &__other-accounts-container{
+  &__other-accounts-container {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -84,20 +120,37 @@
 
   }
 
-  &__options-container{
+  &__options-container {
     list-style: none;
     display: flex;
     flex-direction: column;
   }
-  &__option{
+
+  &__option {
     padding: 8px 0;
-    border: 1px solid black;
   }
 }
 
+/*
+.nav__account-options:hover .hidden-menu{
+  display: flex;
+  background-color: $hidden-menu-background;
+  position: absolute;
+  gap: 16px;
+  flex-direction: column;
+  padding: 16px;
+  top: 80px;
+  right: 37px;
+  width: 240px;
+}
+.nav__account-options:hover{
+  background-color: $hidden-menu-background;
+}
+*/
 
-@media(max-width: 1439px){
-  .nav__profile-name{
+
+@media(max-width: 1439px) {
+  .nav__profile-name {
     display: none;
   }
 }
