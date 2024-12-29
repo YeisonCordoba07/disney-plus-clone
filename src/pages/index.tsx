@@ -15,8 +15,11 @@ export default function Home() {
       </Head>
       <div className="main-container">
         <main>
+            <header>
+                <NavBar/>
+
+            </header>
             
-            <NavBar/>
 
         </main>
 
