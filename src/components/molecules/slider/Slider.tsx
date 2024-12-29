@@ -5,10 +5,10 @@ function Slider(){
     <>
       <section>
 
-        <div>
+        <div className="slider-container">
 
-          <button> &#10094; </button>
-          <div className="slider-container">
+          <button className="slider__left-button slider__arrow-buttons"> &#10094; </button>
+          <div className="slider-item-container">
             <SliderItem></SliderItem>
             <SliderItem></SliderItem>
             <SliderItem></SliderItem>
@@ -25,11 +25,11 @@ function Slider(){
             <SliderItem></SliderItem>
             <SliderItem></SliderItem>
           </div>
-          <button> &#10095; </button>
+          <button className="slider__right-button slider__arrow-buttons"> &#10095; </button>
 
         </div>
 
-        <div>
+        <div className="slider__pagination-container">
           circulos
         </div>
 

@@ -1,4 +1,10 @@
-.slider-container{
+.slider-container {
+  position: relative;
+  display: flex;
+
+}
+
+.slider-item-container{
   display: flex;
   overflow: hidden;
   justify-content: center;
@@ -8,4 +14,34 @@
   overflow-x: auto;
   gap: 20px;
   padding: 20px;
+}
+
+.slider{
+
+  &__right-button{
+    right: 0;
+  }
+
+  &__left-button{
+    left: 0;
+  }
+}
+
+.slider__arrow-buttons{
+  position: absolute;
+  width: 3.5%;
+  background-color: transparent;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  font-size: 40px;
+  color: white;
+  border-style: solid;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &:hover{
+    border-color: green;
+    opacity: 1;
+  }
 }
