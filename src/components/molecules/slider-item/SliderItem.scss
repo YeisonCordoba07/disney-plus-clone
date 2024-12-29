@@ -37,6 +37,23 @@
 
 
 
+// Animations
+.animation-image-in{
+  animation: image-in 1000ms cubic-bezier(0.42, 0, 0.58, 1) 0ms forwards;
+}
+
+@keyframes image-in {
+
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.00);
+  }
+}
+
+
+
 
 // Titles images
 .slider-info{
@@ -89,17 +106,4 @@
 
 
 
-// Animations
-.animation-image-in{
-  animation: image-in 1000ms cubic-bezier(0.42, 0, 0.58, 1) 0ms forwards;
-}
 
-@keyframes image-in {
-
-  0% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1.00);
-  }
-}
