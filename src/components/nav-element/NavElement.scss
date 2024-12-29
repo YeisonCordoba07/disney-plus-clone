@@ -20,7 +20,7 @@
             content: "";
             position: absolute;
             bottom: -2px;
-            left: 0px;
+            left: 0;
             border-radius: 4px;
 
             width: 0;
@@ -38,4 +38,10 @@
     height: 1px;
     width: 100%;
     opacity: 1;
+}
+
+@media(max-width: 1439px){
+  .nav-element__text{
+    display: none;
+  }
 }
