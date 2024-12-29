@@ -1,0 +1,14 @@
+.nav-element{
+
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+    &__svg{
+        width: 20px;
+        height: 20px;
+        font-size: 13px;
+    }
+
+}
