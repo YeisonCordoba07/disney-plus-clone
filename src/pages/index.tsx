@@ -1,5 +1,8 @@
-import {NavBar} from "@/components/nav-bar/NavBar";
+import {NavBar} from "@/components/atoms/nav-bar/NavBar";
 import Head from "next/head";
+import {AgeAdvisor} from "@/components/atoms/age-advisor/AgeAdvisor";
+import {SliderItem} from "@/components/molecules/slider-item/SliderItem";
+import {Slider} from "@/components/molecules/slider/Slider";
 
 
 export default function Home() {
@@ -13,10 +16,23 @@ export default function Home() {
       </Head>
       <div className="main-container">
 
+        <header className="header">
+          <NavBar/>
+        </header>
+
         <main>
-          <header className="header">
-            <NavBar/>
-          </header>
+          <section>
+            <AgeAdvisor>
+              10
+            </AgeAdvisor>
+
+            <SliderItem>
+
+            </SliderItem>
+
+            <Slider></Slider>
+
+          </section>
         </main>
 
         <footer>

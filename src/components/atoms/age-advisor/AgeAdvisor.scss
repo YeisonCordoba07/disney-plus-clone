@@ -1,0 +1,13 @@
+$age-advisor-background-color: #30313c;
+
+.age-advisor {
+  padding: 3px 5px;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: $age-advisor-background-color;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}

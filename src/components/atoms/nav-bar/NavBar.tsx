@@ -1,4 +1,4 @@
-import {NavElement} from "../nav-element/NavElement";
+import {NavElement} from "@/components/molecules/nav-element/NavElement";
 import {useState} from "react";
 
 function NavBar() {
