@@ -24,10 +24,11 @@ body {
 .main-container{
     background-image: url("/disney-background-image.png");
     background-repeat: no-repeat;
-    object-fit: contain;
+    background-size: cover;
 }
 
 .header{
+    width: 100%;
     animation: nav-shadow 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
