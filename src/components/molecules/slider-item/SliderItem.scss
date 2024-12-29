@@ -27,7 +27,6 @@
     aspect-ratio: auto;
     animation: image-in 1000ms cubic-bezier(0.42, 0, 0.58, 1) 0ms forwards;
     border-radius: inherit;
-
   }
 
 }
@@ -38,8 +37,9 @@
 
 
 
+
 // Titles images
-.title-container{
+.slider-info{
   position: absolute;
 
   left: 0;
@@ -54,27 +54,38 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   width: fit-content;
 
+
+  &__title-image{
+    width: 410px;
+  }
+
+  &__details-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__text-episodes{
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  &__advisor-category-container{
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    align-items: center;
+  }
+
+  &__advisor-category{
+    color: #a8a9ad;
+    font-size: 12px;
+  }
+
 }
 
-.image-title{
-  width: 410px;
-}
-
-.text-container{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.text-category{
-  display: flex;
-  gap: 16px;
-  justify-content: start;
-  align-items: center;
-}
 
 
 
@@ -82,6 +93,7 @@
 .animation-image-in{
   animation: image-in 1000ms cubic-bezier(0.42, 0, 0.58, 1) 0ms forwards;
 }
+
 @keyframes image-in {
 
   0% {
