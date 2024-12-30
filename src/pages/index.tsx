@@ -1,7 +1,5 @@
 import {NavBar} from "@/components/atoms/nav-bar/NavBar";
 import Head from "next/head";
-import {AgeAdvisor} from "@/components/atoms/age-advisor/AgeAdvisor";
-import {SliderItem} from "@/components/molecules/slider-item/SliderItem";
 import {Slider} from "@/components/molecules/slider/Slider";
 
 
@@ -23,14 +21,6 @@ export default function Home() {
 
         <main className="principal-main">
           <section>
-            <AgeAdvisor>
-              10
-            </AgeAdvisor>
-
-            <SliderItem>
-
-            </SliderItem>
-
             <Slider></Slider>
 
           </section>

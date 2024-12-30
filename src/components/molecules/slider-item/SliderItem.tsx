@@ -1,29 +1,46 @@
-import {AgeAdvisor} from "@/components/atoms/age-advisor/AgeAdvisor";
+import { AgeAdvisor } from "@/components/atoms/age-advisor/AgeAdvisor";
 
-function SliderItem() {
+import { Movies } from "@/types/type";
+
+interface Props{
+  movie: Movies
+}
+
+function SliderItem({movie}: Props) {
+
+
   return (
     <>
+        <div className="slider-item" key={movie.id}>
+          {/* Imagen principal del slider */}
+          <img className="slider-item__image" src={movie.image.poster} alt="Poster" />
 
-      <div className="slider-item">
-        <img className="slider-item__image" src="/slider-icons/imagen3.webp" alt=""/>
+          {/* Contenedor de información */}
+          <div className="slider-info">
+            {/* Imagen del título */}
+            <img className="slider-info__title-image" src={movie.image.title} alt="Title" />
 
-        <div className="slider-info">
-          <img className="slider-info__title-image" src="/slider-icons/imagen3-title.webp"/>
-          <div className="slider-info__details-container">
-            <span className="slider-info__text-episodes">Todos los episodios ya disponibles</span>
+            {/* Detalles */}
+            <div className="slider-info__details-container">
+              <span className="slider-info__text-episodes">{movie.episode}</span>
 
-            <div className="slider-info__advisor-category-container">
-              <AgeAdvisor>16</AgeAdvisor>
-              <span className="slider-info__advisor-category">2024 Acción y aventura, Espionaje</span>
+              <div className="slider-info__advisor-category-container">
+                {/* Edad recomendada */}
+                <AgeAdvisor>{movie.extra.ageAdvisor}</AgeAdvisor>
+
+                {/* Género y año */}
+                <span className="slider-info__advisor-category">
+                  {movie.extra.year} {movie.extra.genre.join(", ")}
+                </span>
+              </div>
             </div>
 
           </div>
+
         </div>
-      </div>
 
     </>
-
   );
 }
 
-export {SliderItem};
+export { SliderItem };

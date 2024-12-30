@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "image": {
+      "poster": "/slider-icons/imagen3.webp",
+      "title": "/slider-icons/imagen3-title.webp"
+    },
+    "episode": "Todos los episodios ya disponibles",
+    "extra": {
+      "ageAdvisor": 16,
+      "genre": [
+        "Acción y aventura",
+        "Espionaje"
+      ],
+      "year": 2024
+    }
+  },
+  {
+    "id": 2,
+    "image": {
+      "poster": "/slider-icons/imagen4.webp",
+      "title": "https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/718510e7-76d8-4e8d-8342-92da403e10f2/trim?format=webp&max=800%7C450"
+    },
+    "episode": "Todos los episodios ya disponibles",
+    "extra": {
+      "ageAdvisor": 14,
+      "genre": [
+        "Superhéroes",
+        "Acción y aventura"
+      ],
+      "year": 2021
+    }
+  },
+  {
+    "id": 3,
+    "image": {
+      "poster": "/slider-icons/imagen1.webp",
+      "title": "https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/dbcd5a74-7ca7-4f00-8eef-d226d72e7ff8/trim?format=webp&max=800%7C450"
+    },
+    "episode": "Todos los episodios ya disponibles",
+    "extra": {
+      "ageAdvisor": 7,
+      "genre": [
+        "Comedia",
+        "Animación"
+      ],
+      "year": 2024
+    }
+  },
+  {
+    "id": 4,
+    "image": {
+      "poster": "/slider-icons/imagen2.webp",
+      "title": "https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/7c8148b8-c63a-45db-873f-0c8915ebdcf1/trim?format=webp&max=800%7C450"
+    },
+    "episode": "Nos preparamos para Mufasa: El Rey León",
+    "extra": {
+      "ageAdvisor": 7,
+      "genre": [
+        "Acción y aventura",
+        "La aventura de crecer"
+      ],
+      "year": 1994
+    }
+  }
+]

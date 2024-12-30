@@ -2,19 +2,22 @@
   position: relative;
   display: flex;
 
+  height: fit-content;
+
 }
 
 .slider-item-container{
   display: flex;
-  overflow: hidden;
-  justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;
-  overflow-x: auto;
+  height: 700px;
   gap: 20px;
   padding: 20px;
+  overflow-x: hidden;
 }
+
+
+
 
 .slider{
 
@@ -25,23 +28,29 @@
   &__left-button{
     left: 0;
   }
+
+  &__arrow-buttons{
+    position: absolute;
+    width: 3.5%;
+    background-color: transparent;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    font-size: 40px;
+    color: white;
+    border-style: solid;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &:hover{
+      border-color: green;
+      opacity: 1;
+    }
+  }
 }
 
-.slider__arrow-buttons{
-  position: absolute;
-  width: 3.5%;
-  background-color: transparent;
-  z-index: 5;
-  top: 0;
-  bottom: 0;
-  font-size: 40px;
-  color: white;
-  border-style: solid;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 
-  &:hover{
-    border-color: green;
-    opacity: 1;
-  }
+.slider__pagination-container{
+  height: 100px;
+
 }

@@ -35,12 +35,12 @@ function NavBar() {
 
           <div className="hidden-menu__other-accounts-container">
             <div className="nav__current-account">
-              <img className="nav__current-account-image" src="https://randomuser.me/api/portraits/women/75.jpg"
+              <img className="nav__current-account-image" src="https://randomuser.me/api/portraits/women/85.jpg"
                    alt=""/>
               <span className="nav__current-account__name">ACCOUNT 1</span>
             </div>
             <div className="nav__current-account">
-              <img className="nav__current-account-image" src="https://randomuser.me/api/portraits/women/75.jpg"
+              <img className="nav__current-account-image" src="https://randomuser.me/api/portraits/women/95.jpg"
                    alt=""/>
               <span className="nav__current-account__name">Crear perfil</span>
             </div>
