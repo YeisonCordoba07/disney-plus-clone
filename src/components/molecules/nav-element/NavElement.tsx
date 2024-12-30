@@ -1,11 +1,13 @@
 interface Props{
     text: string,
     src: string,
+    className: string,
 }
 
-function NavElement({text, src = "nav-icons/tv-icon.svg"}: Props){
-    return(
-        <div className="nav-element">
+function NavElement({className, text, src = "nav-icons/tv-icon.svg"}: Props){
+
+  return(
+        <div className={`nav-element ${className}`}>
 
             <img className="nav-element__svg" src={src} alt="nav icon"/>
                

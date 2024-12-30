@@ -20,7 +20,7 @@ export default function Home() {
           <NavBar/>
         </header>
 
-        <main>
+        <main className="principal-main">
           <section>
             <AgeAdvisor>
               10

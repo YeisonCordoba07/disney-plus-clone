@@ -6,7 +6,6 @@ $hidden-menu-color-border: #2c2c2c;
   display: flex;
   gap: 20px;
   height: 80px;
-  border: 1px solid black;
   justify-content: space-between;
   align-items: center;
   padding: 0 36px;
@@ -92,6 +91,7 @@ $hidden-menu-color-border: #2c2c2c;
 
   border: 1px solid $hidden-menu-color-border;
   border-top: none;
+  z-index: 50;
 
 
   &--active {

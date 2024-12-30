@@ -32,8 +32,14 @@ body {
     animation: nav-shadow 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
-}
+    z-index: 50;
+    position: fixed;
 
+
+}
+.principal-main{
+    padding-top: 80px;
+}
 @keyframes nav-shadow {
     0% {
         background-color: rgba(0, 0, 0, 0);
