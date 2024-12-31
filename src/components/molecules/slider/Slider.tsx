@@ -1,14 +1,13 @@
-import { SliderItem } from "@/components/molecules/slider-item/SliderItem";
+import {SliderItem} from "@/components/molecules/slider-item/SliderItem";
 import MovieJson from "@/mock/slider-items.json";
-import { useCallback, useEffect, useRef, useState } from "react";
-
+import {useCallback, useEffect, useRef, useState} from "react";
 
 
 function Slider() {
   const listRef = useRef<HTMLDivElement | null>(null);
   const [movies, setMovies] = useState(MovieJson);
   const [isScrolling, setIsScrolling] = useState(false);
-
+  const [currentId, setCurrentId] = useState(0);
 
 
   // Aseguramos que el scroll inicial esté centrado
@@ -19,11 +18,9 @@ function Slider() {
       const gap: number = 20;
       // Centramos en el segundo elemento (el primero visible completamente)
       container.scrollLeft = (itemWidth + gap) * 2;
+      setCurrentId(movies[0].id);
     }
   }, []);
-
-
-
 
 
   const scrollToImage = useCallback((direction: 'prev' | 'next') => {
@@ -41,7 +38,6 @@ function Slider() {
     console.log(scrollAmount);
 
 
-
     // Esperamos a que termine la animación
     setTimeout(() => {
       if (direction === 'next') {
@@ -50,12 +46,16 @@ function Slider() {
           const firstMovie = prevMovies[0];
           return [...prevMovies.slice(1), firstMovie];
         });
+
+
       } else {
         // Movemos el último elemento al principio
         setMovies(prevMovies => {
           const lastMovie = prevMovies[prevMovies.length - 1];
           return [lastMovie, ...prevMovies.slice(0, -1)];
         });
+
+
       }
 
       // Reseteamos la posición del scroll sin animación
@@ -66,7 +66,6 @@ function Slider() {
 
       setIsScrolling(false);
     }, 900);
-
 
 
     // Hacemos el scroll suave
@@ -80,12 +79,11 @@ function Slider() {
   }, [isScrolling]);
 
 
-
-
-
   return (
     <section>
       <div className="slider-container">
+
+        {/* Prev button */}
         <button
           className="slider__left-button slider__arrow-buttons"
           onClick={() => scrollToImage('prev')}
@@ -93,6 +91,8 @@ function Slider() {
         >
           &#10094;
         </button>
+
+        {/* Slider */}
         <div
           className="slider-item-container"
           ref={listRef}
@@ -104,6 +104,8 @@ function Slider() {
             />
           ))}
         </div>
+
+        {/* Nex button */}
         <button
           className="slider__right-button slider__arrow-buttons"
           onClick={() => scrollToImage('next')}
@@ -111,12 +113,26 @@ function Slider() {
         >
           &#10095;
         </button>
+
+
+        {/* Slider Pagination */}
+        <div className="slider__pagination-container">
+          {
+            movies.map((movie) => (
+
+              <button
+                className={currentId === movie.id ? "slider__pagination-button slider__pagination-button--active" : "slider__pagination-button"}
+                key={movie.id}
+              />
+
+            ))
+          }
+
+        </div>
       </div>
-      <div className="slider__pagination-container">
-        circulos
-      </div>
+
     </section>
   );
 }
 
-export { Slider };
+export {Slider};
