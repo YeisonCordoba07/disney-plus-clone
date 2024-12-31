@@ -13,7 +13,7 @@
 
   transition: outline-color 0.4s ease, transform 0.4s ease, opacity 0.4s ease, border-radius 0.4s ease;
 
-  overflow: clip;
+  overflow: hidden;
 
   &:hover{
     outline: 3px solid white;
