@@ -32,6 +32,22 @@
     }
   },
   {
+    "id": 5,
+    "image": {
+      "poster": "/slider-icons/imagen5.webp",
+      "title": "https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/f1ef9c18-cf8a-40d1-886b-28ea1e650c73/trim?format=webp&max=800%7C450"
+    },
+    "episode": "Nueva película ya disponible",
+    "extra": {
+      "ageAdvisor": 18,
+      "genre": [
+        "Superhéroes",
+        "Acción y aventura"
+      ],
+      "year": 2024
+    }
+  },
+  {
     "id": 3,
     "image": {
       "poster": "/slider-icons/imagen1.webp",
@@ -63,4 +79,5 @@
       "year": 1994
     }
   }
+
 ]
