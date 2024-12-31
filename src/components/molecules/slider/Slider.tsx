@@ -14,7 +14,8 @@ function Slider() {
   useEffect(() => {
     if (listRef.current) {
       const container: HTMLDivElement = listRef.current;
-      const itemWidth: number = container.querySelector('.slider-item')?.offsetWidth || 0;
+      const item = container.querySelector('.slider-item') as HTMLDivElement; // Aseguramos que es un HTMLElement
+      const itemWidth: number = item?.offsetWidth || 0;
       const gap: number = 20;
       // Centramos en el segundo elemento (el primero visible completamente)
       container.scrollLeft = (itemWidth + gap) * 2;

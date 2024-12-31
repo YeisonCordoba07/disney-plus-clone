@@ -17,3 +17,14 @@ export interface Extra {
   genre: string[]
   year: number
 }
+
+
+// Main Collections
+export type ItemCollectionType = ItemCollectionTypes[]
+
+export interface ItemCollectionTypes {
+  id: string
+  video: string
+  image: string
+  section?: string
+}

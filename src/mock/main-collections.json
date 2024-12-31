@@ -1,0 +1,44 @@
+[
+  {
+    "id": "disney-main-collection-345234",
+    "section": "disney",
+    "video": "/main-collections/videos/video-disney.mp4",
+    "image": "/main-collections/images/disney.webp"
+  },
+  {
+    "id": "pixar-main-collection-456845",
+    "section": "pixar",
+    "video": "/main-collections/videos/video-pixar.mp4",
+    "image": "/main-collections/images/pixar.webp"
+  },
+  {
+    "id": "marvel-main-collection-6785683",
+    "section": "marvel",
+    "video": "/main-collections/videos/video-marvel.mp4",
+    "image": "/main-collections/images/marvel.webp"
+  },
+  {
+    "id": "starwars-main-collection-345234",
+    "section": "star wars",
+    "video": "/main-collections/videos/video-star-wars.mp4",
+    "image": "/main-collections/images/star-wars.webp"
+  },
+  {
+    "id": "natgeo-main-collection-783682",
+    "section": "national geographic",
+    "video": "/main-collections/videos/video-national-geographic.mp4",
+    "image": "/main-collections/images/national-geographic.webp"
+  },
+  {
+    "id": "espn-main-collection-5478903",
+    "section": "espn",
+    "video": "/main-collections/videos/video-espn.mp4",
+    "image": "/main-collections/images/espn.webp"
+  },
+  {
+    "id": "star-main-collection-61894",
+    "section": "star",
+    "video": "/main-collections/videos/video-star.mp4",
+    "image": "/main-collections/images/star.webp"
+  }
+]

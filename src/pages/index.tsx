@@ -1,6 +1,7 @@
 import {NavBar} from "@/components/atoms/nav-bar/NavBar";
 import Head from "next/head";
 import {Slider} from "@/components/molecules/slider/Slider";
+import {MainCollections} from "@/components/molecules/main-collections/MainCollections";
 
 
 export default function Home() {
@@ -22,7 +23,9 @@ export default function Home() {
         <main className="principal-main">
           <section>
             <Slider></Slider>
-
+          </section>
+          <section>
+            <MainCollections/>
           </section>
         </main>
 
