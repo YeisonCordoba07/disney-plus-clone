@@ -1,4 +1,4 @@
-.collection{
+.item-collection {
   display: flex;
   width: 100%;
   height: 100%;
@@ -15,7 +15,8 @@
 
   overflow: hidden;
 
-  &:hover{
+
+  &:hover {
     outline: 3px solid white;
     transform: scale(1.05);
     border-radius: 15px;
@@ -24,8 +25,7 @@
   }
 
 
-
-  &__video{
+  &__video {
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -36,7 +36,7 @@
     opacity: 0;
   }
 
-  &__image{
+  &__image {
     width: 100%;
     height: auto;
     z-index: 2;
@@ -48,7 +48,37 @@
 }
 
 
-
-.collection:hover .collection__video{
+.item-collection:hover .item-collection__video {
   opacity: 1;
+}
+
+
+
+
+@media(max-width: 767px) {
+  .item-collection {
+    flex: 0 1 22%;
+    height: auto;
+    aspect-ratio: 59 / 55;
+    justify-content: center;
+    max-width: 25%;
+
+
+
+    &__video {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__image {
+      margin: auto;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+  }
+
 }

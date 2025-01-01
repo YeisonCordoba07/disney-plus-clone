@@ -15,11 +15,12 @@ function ItemCollection({videoSource, imageSource}: Props) {
 
 
   return (
-    <article className="collection"
-             onMouseOver={handleMouseOver}
+    <article
+      className="item-collection"
+      onMouseOver={handleMouseOver}
     >
-      <img className="collection__image" src={imageSource} alt=""/>
-      <video className="collection__video" ref={videoRef} muted loop>
+      <img className="item-collection__image" src={imageSource} alt=""/>
+      <video className="item-collection__video" ref={videoRef} muted loop>
         <source src={videoSource} type="video/mp4"/>
       </video>
     </article>

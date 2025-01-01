@@ -21,25 +21,37 @@ body {
   padding: 0;
   margin: 0;
 }
+
+
 .main-container{
     background-image: url("/disney-background-image.png");
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .header{
-    width: 100%;
-    animation: nav-shadow 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
-    z-index: 50;
-    position: fixed;
-
-
-}
-.principal-main{
+    display: flex;
+    flex-direction: column;
     padding-top: 80px;
+    position: relative;
 }
+
+.main{
+    padding: 0 71px;
+}
+
+@media(max-width: 767px){
+    .principal-main{
+        padding: 0 40px;
+    }
+
+}
+
+
+
+
+
 @keyframes nav-shadow {
     0% {
         background-color: rgba(0, 0, 0, 0);

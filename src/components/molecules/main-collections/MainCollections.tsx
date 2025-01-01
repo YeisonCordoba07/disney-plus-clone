@@ -2,24 +2,24 @@ import MainCollectionsJson from "@/mock/main-collections.json";
 import {ItemCollection} from "@/components/atoms/item-collection/ItemCollection";
 
 
-
-function MainCollections(){
+function MainCollections() {
   const data = MainCollectionsJson;
 
-  return(
+  return (
     <div className="main-collections">
+
       {
-        data.map(item =>{
-          return(
+        data.map((item) => {
+
+          return (
             <ItemCollection
               videoSource={item.video}
               imageSource={item.image}
               key={item.id}/>
           );
+
         })
       }
-
-
 
     </div>
   );

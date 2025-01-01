@@ -1,9 +1,24 @@
-.main-collections{
+.main-collections {
+  padding: 8px 0;
   display: flex;
   gap: 16px;
   width: 100%;
-  margin: 0 70px;
+
   margin: auto;
-  padding: 30px 70px
+
+}
+
+
+
+@media(max-width: 767px) {
+  .main-collections {
+    padding: 10px 0;
+    gap: 20px;
+    width: 100%;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
 
 }

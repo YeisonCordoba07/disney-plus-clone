@@ -6,9 +6,19 @@ $hidden-menu-color-border: #2c2c2c;
   display: flex;
   gap: 20px;
   height: 80px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 0 36px;
+  top: 0;
+
+  animation: nav-shadow 1s linear both;
+  animation-timeline: scroll();
+  animation-range: 0 300px;
+
+  z-index: 50;
+  position: fixed;
+
 
   &__elements-list {
     display: flex;
@@ -54,7 +64,7 @@ $hidden-menu-color-border: #2c2c2c;
   &__current-account {
     display: flex;
     gap: 16px;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 
     &-image {
@@ -68,6 +78,15 @@ $hidden-menu-color-border: #2c2c2c;
     }
   }
 
+}
+
+@keyframes nav-shadow {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: black;
+  }
 }
 
 
@@ -116,7 +135,7 @@ $hidden-menu-color-border: #2c2c2c;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    align-items: start;
+    align-items: flex-start;
 
   }
 
