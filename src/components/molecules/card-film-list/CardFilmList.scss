@@ -4,5 +4,19 @@
   padding: 22px 0;
   height: fit-content;
   border: 1px solid red;
-  overflow-x: visible;
+  position: relative;
+
+  & > button{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__container{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    overflow: hidden;
+  }
 }
+
