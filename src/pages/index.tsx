@@ -2,6 +2,7 @@ import {NavBar} from "@/components/atoms/nav-bar/NavBar";
 import Head from "next/head";
 import {Slider} from "@/components/molecules/slider/Slider";
 import {MainCollections} from "@/components/molecules/main-collections/MainCollections";
+import {CardFilm} from "@/components/atoms/card-film/CardFilm";
 
 
 export default function Home() {
@@ -30,9 +31,13 @@ export default function Home() {
           <section>
             <MainCollections/>
           </section>
+          <section>
+            <CardFilm imageSource="/cards/images/imagen2.webp"/>
+            
+          </section>
         </main>
 
-        <footer>
+        <footer className="footer">
 
         </footer>
 
