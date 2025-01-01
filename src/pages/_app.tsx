@@ -7,6 +7,7 @@ import "@/components/molecules/slider-item/SliderItem.scss";
 import "@/components/molecules/main-collections/MainCollections.scss";
 import "@/components/atoms/item-collection/ItemCollection.scss";
 import "@/components/atoms/card-film/CardFilm.scss";
+import "@/components/molecules/card-film-list/CardFilmList.scss";
 
 
 import type { AppProps } from "next/app";

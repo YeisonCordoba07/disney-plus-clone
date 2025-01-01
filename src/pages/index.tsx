@@ -3,6 +3,7 @@ import Head from "next/head";
 import {Slider} from "@/components/molecules/slider/Slider";
 import {MainCollections} from "@/components/molecules/main-collections/MainCollections";
 import {CardFilm} from "@/components/atoms/card-film/CardFilm";
+import {CardFilmList} from "@/components/molecules/card-film-list/CardFilmList";
 
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
           </section>
           <section>
             <CardFilm imageSource="/cards/images/imagen2.webp"/>
+            <CardFilmList/>
             
           </section>
         </main>
