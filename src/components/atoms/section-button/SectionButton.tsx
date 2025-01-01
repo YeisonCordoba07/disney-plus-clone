@@ -1,17 +1,17 @@
 interface Props{
   direction: string;
-  scroll: (text: string) => void;
+  scrollFunction:  (text: ("prev" | "next")) => void;
   isScrolling?: boolean;
 }
 
-function SectionButton({direction, scroll, isScrolling}: Props){
+function SectionButton({direction, scrollFunction, isScrolling}: Props){
   return (
     <button
-      className="slider__left-button slider__arrow-buttons"
-      onClick={() => scroll('prev')}
+      className={direction === "next" ? "section-button section-button--right" : "section-button section-button--left"}
+      onClick={() => scrollFunction('prev')}
       disabled={isScrolling}
     >
-      {direction === "next" ? "&#10095;" : "&#10094;" }
+      {direction === "next" ? "\u276F" : "\u276E"}
     </button>
 
   );

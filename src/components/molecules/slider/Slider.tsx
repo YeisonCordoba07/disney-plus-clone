@@ -1,6 +1,7 @@
 import {SliderItem} from "@/components/molecules/slider-item/SliderItem";
 import MovieJson from "@/mock/slider-items.json";
 import {useCallback, useEffect, useRef, useState} from "react";
+import {SectionButton} from "@/components/atoms/section-button/SectionButton";
 
 
 function Slider() {
@@ -85,13 +86,12 @@ function Slider() {
       <div className="slider-container">
 
         {/* Prev button */}
-        <button
-          className="slider__left-button slider__arrow-buttons"
-          onClick={() => scrollToImage('prev')}
-          disabled={isScrolling}
-        >
-          &#10094;
-        </button>
+        <SectionButton
+          direction={"prev"}
+          scrollFunction={()=>scrollToImage("prev")}
+          isScrolling={isScrolling}
+        />
+
 
         {/* Slider */}
         <div
@@ -106,14 +106,13 @@ function Slider() {
           ))}
         </div>
 
+
         {/* Nex button */}
-        <button
-          className="slider__right-button slider__arrow-buttons"
-          onClick={() => scrollToImage('next')}
-          disabled={isScrolling}
-        >
-          &#10095;
-        </button>
+        <SectionButton
+          direction={"next"}
+          scrollFunction={()=>scrollToImage("next")}
+          isScrolling={isScrolling}
+        />
 
 
         {/* Slider Pagination */}
