@@ -84,8 +84,9 @@ a {
 /* General */
 
 .disney-shadow{
+    box-shadow: 0px 30px 30px -20px rgba(0, 0, 0, 0.80);
 
-    &::after{
+    /*&::after{
         content: "";
         position: absolute;
         box-shadow: 0px 20px 24px 0px rgba(0, 0, 0, 0.80);
@@ -94,7 +95,7 @@ a {
         bottom: 10px;
         height: 33px;
         z-index: -1;
-    }
+    }*/
 }
 
 .disney-outline-hover {

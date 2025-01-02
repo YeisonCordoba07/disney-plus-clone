@@ -9,7 +9,6 @@
   cursor: pointer;
 
   background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
-  box-shadow: 0 20px 24px 0 rgba(0, 0, 0, 0.80);
 
   transition: outline-color 0.4s ease, transform 0.4s ease, opacity 0.4s ease, border-radius 0.4s ease;
 
@@ -34,6 +33,7 @@
     top: 0;
     left: 0;
     opacity: 0;
+
   }
 
   &__image {

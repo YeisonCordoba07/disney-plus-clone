@@ -16,7 +16,7 @@ function ItemCollection({videoSource, imageSource}: Props) {
 
   return (
     <article
-      className="item-collection"
+      className="item-collection disney-shadow"
       onMouseOver={handleMouseOver}
     >
       <img className="item-collection__image" src={imageSource} alt=""/>
