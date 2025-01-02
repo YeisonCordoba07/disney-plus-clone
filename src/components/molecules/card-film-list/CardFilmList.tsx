@@ -1,69 +1,82 @@
 import FilmsJson from "@/mock/mock-films.json";
-import {CardFilm} from "@/components/atoms/card-film/CardFilm";
-import {SectionButton} from "@/components/atoms/section-button/SectionButton";
-import {useEffect, useRef, useState} from "react";
+import { CardFilm } from "@/components/atoms/card-film/CardFilm";
+import { SectionButton } from "@/components/atoms/section-button/SectionButton";
+import { useEffect, useRef, useState } from "react";
 
 function CardFilmList() {
-
   const filmsData = FilmsJson;
   const listRef = useRef<HTMLDivElement | null>(null);
-  const [containerWidth, setContainerWidth] = useState(0);
-  const [cardWidth, setCardWidth] = useState(0);
-  const prueba = {
+  const [scrollObjects, setScrollObject] = useState({
     containerWidth: 0,
     cardWidth: 0,
-    gap: 16
-  }
+  });
 
-  function changeDirection(){
+
+
+
+  function changeDirection(direction: string) {
     const container: HTMLDivElement | null = listRef.current;
+    if (!container) return;
+
     const gap = 16;
-    const numberOfElements = Math.trunc(containerWidth / (cardWidth + gap));
-    console.log("Total ancho: ", numberOfElements);
-    console.log(containerWidth);
-    console.log(cardWidth);
+    const numberOfElements = Math.trunc(
+      scrollObjects.containerWidth / (scrollObjects.cardWidth + gap)
+    );
 
-    console.log("Total desplazamiento: ", container.scrollLeft + (cardWidth * numberOfElements) + (gap*numberOfElements));
+    const signo =
+      direction === "next"
+        ? numberOfElements * (scrollObjects.cardWidth + gap)
+        : -numberOfElements * (scrollObjects.cardWidth + gap);
 
-
-    container?.scrollTo({
-      left: container.scrollLeft + (cardWidth * numberOfElements) + (gap*numberOfElements),
-      behavior: "smooth"
-    })
-
+    container.scrollTo({
+      left: container.scrollLeft + signo,
+      behavior: "smooth",
+    });
   }
-
-
 
   useEffect(() => {
-    const container: HTMLDivElement | null = listRef.current;
-    setContainerWidth(container?.offsetWidth || 0);
-    setCardWidth(container?.querySelector(".card-film")?.offsetWidth || 0);
+    const container = listRef.current;
 
-  }, [])
+    if (!container) return;
 
+    const handleResize = () => {
+      setScrollObject({
+        containerWidth: container.offsetWidth || 0,
+        cardWidth: container.querySelector(".card-film")?.offsetWidth || 0,
+      });
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
 
 
   return (
     <article className="card-film-list">
-      <button onClick={() => {
-        changeDirection()
-      }}>NEXT
-      </button>
+
+      <SectionButton
+        direction={"prev"}
+        scrollFunction={() => changeDirection("prev")}
+      />
 
       <div className="card-film-list__container" ref={listRef}>
-        {
-          filmsData.map((film) => {
-            return (
-              <CardFilm imageSource={film.image} key={film.id}/>
-            );
-          })
-        }
+        {filmsData.map((film) => (
+          <CardFilm imageSource={film.image} key={film.id} />
+        ))}
       </div>
+
+      <SectionButton
+        direction={"next"}
+        scrollFunction={() => changeDirection("next")}
+      />
 
     </article>
   );
 }
 
-export {CardFilmList};
+export { CardFilmList };

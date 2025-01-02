@@ -6,12 +6,6 @@
   border: 1px solid red;
   position: relative;
 
-  & > button{
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
   &__container{
     display: flex;
     gap: 16px;
