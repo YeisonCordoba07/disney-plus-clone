@@ -5,6 +5,7 @@
   &__title{
     font-size: 20px;
     color: #cacaca;
+    padding: var(--large-padding);
   }
 
   &__wrapper{
@@ -18,11 +19,34 @@
     display: flex;
     gap: 16px;
 
-    padding: 42px 71px;
+    padding: 10px 71px 42px 71px;
     overflow-x: hidden;
     overflow-y: visible;
 
+  }
+}
 
+
+
+
+@media (min-width: 768px) and (max-width: 1439px){
+  .card-film-list__title{
+    padding: var(--small-padding);
+  }
+
+  .card-film-list__container{
+    padding: 10px 40px 42px 40px;
+  }
+}
+
+
+@media(max-width: 767px){
+  .card-film-list__title{
+    padding: var(--small-padding);
+  }
+
+  .card-film-list__container{
+    padding: 10px 40px 42px 40px;
   }
 }
 
