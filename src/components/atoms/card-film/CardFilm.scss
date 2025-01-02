@@ -4,17 +4,46 @@
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  width: 335px;
-  min-width: 335px;
 
   aspect-ratio: 16/9;
   overflow: hidden;
+  flex-wrap: wrap;
+  flex: 0 0 19%;
+
 
 
   &__image {
     object-fit: cover;
     width: 100%;
     aspect-ratio: 16/9;
+  }
+}
+
+
+@media(min-width: 1024px) and (max-width: 1439px){
+  .card-film{
+    //width: 55%;
+    height: 100%;
+    flex: 0 0 24%;
+
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1023px){
+  .card-film{
+    //width: 55%;
+    height: 100%;
+    flex: 0 0 32%;
+
+  }
+}
+
+@media(max-width: 767px){
+  .card-film{
+    //width: 55%;
+    height: 100%;
+    flex: 0 0 49%;
+
   }
 }
 

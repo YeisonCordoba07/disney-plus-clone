@@ -33,7 +33,6 @@ export default function Home() {
             <MainCollections/>
           </section>
           <section>
-            <CardFilm imageSource="/cards/images/imagen2.webp"/>
             <CardFilmList/>
             
           </section>

@@ -34,6 +34,9 @@ function CardFilmList() {
     });
   }
 
+
+
+
   useEffect(() => {
     const container = listRef.current;
 
@@ -53,6 +56,7 @@ function CardFilmList() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
 
 
 
