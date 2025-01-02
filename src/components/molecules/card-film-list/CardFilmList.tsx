@@ -62,22 +62,28 @@ function CardFilmList() {
 
   return (
     <article className="card-film-list">
+      <h4 className="card-film-list__title">Principales</h4>
 
-      <SectionButton
-        direction={"prev"}
-        scrollFunction={() => changeDirection("prev")}
-      />
+      <div className="card-film-list__wrapper">
 
-      <div className="card-film-list__container" ref={listRef}>
-        {filmsData.map((film) => (
-          <CardFilm imageSource={film.image} key={film.id} />
-        ))}
+        <SectionButton
+          direction={"prev"}
+          scrollFunction={() => changeDirection("prev")}
+        />
+
+        <div className="card-film-list__container" ref={listRef}>
+          {filmsData.map((film) => (
+            <CardFilm imageSource={film.image} key={film.id} />
+          ))}
+        </div>
+
+        <SectionButton
+          direction={"next"}
+          scrollFunction={() => changeDirection("next")}
+        />
+
       </div>
 
-      <SectionButton
-        direction={"next"}
-        scrollFunction={() => changeDirection("next")}
-      />
 
     </article>
   );

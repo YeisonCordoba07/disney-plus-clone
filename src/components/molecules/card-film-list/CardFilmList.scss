@@ -1,16 +1,27 @@
 .card-film-list{
   display: flex;
-  gap: 16px;
-  position: relative;
-  height: fit-content;
+  flex-direction: column;
+
+  &__title{
+    font-size: 20px;
+    color: #cacaca;
+  }
+
+  &__wrapper{
+    display: flex;
+    position: relative;
+    height: fit-content;
+  }
+
 
   &__container{
     display: flex;
     gap: 16px;
 
-  padding: 62px 0;
+    padding: 42px 71px;
     overflow-x: hidden;
     overflow-y: visible;
+
 
   }
 }

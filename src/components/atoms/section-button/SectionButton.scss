@@ -1,28 +1,42 @@
 
-.section-button{
-    position: absolute;
-    width: 59px;
-    background-color: transparent;
-    z-index: 5;
-    top: 0;
-    bottom: 0;
-    font-size: 40px;
-    color: white;
-    border-style: solid;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    height: 100%;
+.section-button {
+  position: absolute;
+  width: 81px;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  font-size: 40px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  height: 100%;
+  background-color: transparent;
 
-    &:hover{
-      border-color: green;
-      opacity: 1;
-    }
+  border: none;
 
-  &--left{
+
+  &:hover{
+    opacity: 1;
+  }
+
+
+  &--left {
     left: 0;
   }
-  &--right{
+
+  &--right {
     right: 0;
   }
 
+}
+
+
+
+
+.section-button:hover.section-button--left{
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+.section-button:hover.section-button--right{
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 100%);
 }
