@@ -3,7 +3,11 @@ import { CardFilm } from "@/components/atoms/card-film/CardFilm";
 import { SectionButton } from "@/components/atoms/section-button/SectionButton";
 import { useEffect, useRef, useState } from "react";
 
-function CardFilmList() {
+interface Props{
+  titleCard: string,
+}
+
+function CardFilmList({titleCard}:Props) {
   const filmsData = FilmsJson;
   const listRef = useRef<HTMLDivElement | null>(null);
   const [scrollObjects, setScrollObject] = useState({
@@ -62,7 +66,7 @@ function CardFilmList() {
 
   return (
     <article className="card-film-list">
-      <h4 className="card-film-list__title">Principales</h4>
+      <h4 className="card-film-list__title">{titleCard}</h4>
 
       <div className="card-film-list__wrapper">
 

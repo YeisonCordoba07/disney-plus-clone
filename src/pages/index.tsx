@@ -33,8 +33,13 @@ export default function Home() {
             <MainCollections/>
           </section>
           <section>
-            <CardFilmList/>
-            
+            <CardFilmList titleCard="Principales"/>
+            <CardFilmList titleCard="Recomendaciones para ti"/>
+            <CardFilmList titleCard="Peliculas y series cómicas"/>
+            <CardFilmList titleCard="Destacados de Star"/>
+            <CardFilmList titleCard="Tendencias"/>
+            <CardFilmList titleCard="Series dramáticas"/>
+            <CardFilmList titleCard="Comedia"/>
           </section>
         </main>
 
