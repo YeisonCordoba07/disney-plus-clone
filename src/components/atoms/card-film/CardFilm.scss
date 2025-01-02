@@ -5,17 +5,17 @@
   align-items: center;
   border-radius: 4px;
 
-  aspect-ratio: 16/9;
-  overflow: hidden;
+
   flex-wrap: wrap;
   flex: 0 0 19%;
-
+  position: relative;
 
 
   &__image {
     object-fit: cover;
     width: 100%;
     aspect-ratio: 16/9;
+    border-radius: inherit;
   }
 }
 
