@@ -15,6 +15,7 @@ $hidden-menu-color-border: #2c2c2c;
   animation: nav-shadow 1s linear both;
   animation-timeline: scroll();
   animation-range: 0 50px;
+  box-sizing: border-box;
 
   z-index: 50;
   position: fixed;
@@ -71,10 +72,14 @@ $hidden-menu-color-border: #2c2c2c;
       width: 48px;
       height: 48px;
       border-radius: 50%;
+      &-plus{
+        background-color: #2a2a2a;
+        padding: 15px;
+      }
     }
 
-    &-name {
-
+    &__name {
+      font-size: 15px;
     }
   }
 
@@ -98,6 +103,7 @@ $hidden-menu-color-border: #2c2c2c;
   transition-timing-function: ease-in-out;
   transition-property: height;
   height: 0;
+  box-sizing: border-box;
 
   background-color: inherit;
   position: absolute;
@@ -105,7 +111,7 @@ $hidden-menu-color-border: #2c2c2c;
   flex-direction: column;
   padding: 16px;
   top: 80px;
-  right: 37px;
+  right: 36px;
   width: 240px;
   border-radius: 0 0 4px 4px;
 
@@ -113,6 +119,12 @@ $hidden-menu-color-border: #2c2c2c;
   border-top: none;
   z-index: 50;
 
+    color: #a1a1a1;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    letter-spacing: -.1px;
+    line-height: 1.53;
+  font-weight: 500;
 
   &--active {
     display: flex;
