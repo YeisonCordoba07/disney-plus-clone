@@ -14,7 +14,7 @@ $hidden-menu-color-border: #2c2c2c;
 
   animation: nav-shadow 1s linear both;
   animation-timeline: scroll();
-  animation-range: 0 300px;
+  animation-range: 0 50px;
 
   z-index: 50;
   position: fixed;
@@ -23,7 +23,7 @@ $hidden-menu-color-border: #2c2c2c;
   &__elements-list {
     display: flex;
     height: 100%;
-    gap: 20px;
+    gap: 36px;
     justify-content: center;
     align-items: center;
   }
@@ -82,7 +82,8 @@ $hidden-menu-color-border: #2c2c2c;
 
 @keyframes nav-shadow {
   0% {
-    background-color: rgba(0, 0, 0, 0);
+   // background-color: rgba(0, 0, 0, 0);
+    background: linear-gradient(rgba(48, 50, 62, 0.6) 0%,  rgba(0,0,0,0) 95%);
   }
   100% {
     background-color: black;
