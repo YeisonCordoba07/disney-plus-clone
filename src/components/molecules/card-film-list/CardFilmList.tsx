@@ -5,10 +5,16 @@ import { useEffect, useRef, useState } from "react";
 
 interface Props{
   titleCard: string,
+  position: number,
+  numberOfElements?: number
 }
 
-function CardFilmList({titleCard}:Props) {
-  const filmsData = FilmsJson;
+function CardFilmList({titleCard, position, numberOfElements = 10}:Props) {
+  const filmsData = FilmsJson.filter((item, index)=>{
+    if(index > position && index <= position + numberOfElements){
+      return true;
+    }
+  });
   const listRef = useRef<HTMLDivElement | null>(null);
   const [scrollObjects, setScrollObject] = useState({
     containerWidth: 0,

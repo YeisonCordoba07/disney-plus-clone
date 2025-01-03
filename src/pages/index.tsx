@@ -2,7 +2,6 @@ import {NavBar} from "@/components/atoms/nav-bar/NavBar";
 import Head from "next/head";
 import {Slider} from "@/components/molecules/slider/Slider";
 import {MainCollections} from "@/components/molecules/main-collections/MainCollections";
-import {CardFilm} from "@/components/atoms/card-film/CardFilm";
 import {CardFilmList} from "@/components/molecules/card-film-list/CardFilmList";
 
 
@@ -15,37 +14,41 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 
-        {/* <link rel="shortcut icon"
-              href="https://static-assets.bamgrid.com/product/disneyplus/favicons/favicon-aurora.9c40657cf520f9cfcf49dbb4f316aa7c.ico"/>*/}
+        <link rel="icon"
+              href="/disney-favicon.ico"/>
       </Head>
       <div className="main-container">
+        <div className="main-container-background">
 
-        <header className="header">
-          <NavBar/>
+          <header className="header">
+            <NavBar/>
 
-          <section>
-            <Slider></Slider>
-          </section>
-        </header>
+            <section>
+              <Slider></Slider>
+            </section>
+          </header>
 
-        <main className="main">
-          <section>
-            <MainCollections/>
-          </section>
-          <section>
-            <CardFilmList titleCard="Principales"/>
-            <CardFilmList titleCard="Recomendaciones para ti"/>
-            <CardFilmList titleCard="Peliculas y series cómicas"/>
-            <CardFilmList titleCard="Destacados de Star"/>
-            <CardFilmList titleCard="Tendencias"/>
-            <CardFilmList titleCard="Series dramáticas"/>
-            <CardFilmList titleCard="Comedia"/>
-          </section>
-        </main>
 
-        <footer className="footer">
+          <main className="main">
+            <section>
+              <MainCollections/>
+            </section>
+            <section>
+              <CardFilmList titleCard="Principales" position={0} numberOfElements={20}/>
+              <CardFilmList titleCard="Drama y suspenso" position={20} numberOfElements={15}/>
+              <CardFilmList titleCard="Destacados de Star" position={35} numberOfElements={15}/>
+              <CardFilmList titleCard="Tendencias" position={50} numberOfElements={13}/>
+              <CardFilmList titleCard="Star Wars" position={63} numberOfElements={10}/>
+              <CardFilmList titleCard="Recomendaicones para ti" position={73} numberOfElements={14}/>
+            </section>
+          </main>
 
-        </footer>
+          <footer className="footer">
+
+          </footer>
+
+        </div>
+
 
       </div>
     </>

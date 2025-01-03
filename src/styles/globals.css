@@ -36,6 +36,11 @@ body {
 
 }
 
+.main-container-background {
+    background: linear-gradient(-90deg, rgba(48, 50, 62, 1), rgba(30, 31, 42, 0.8));
+
+}
+
 .header {
     display: flex;
     flex-direction: column;
@@ -63,9 +68,7 @@ body {
     height: 200vh;
 }
 
-section {
-    margin-top: 100px;
-}
+
 
 
 @keyframes nav-shadow {
