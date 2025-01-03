@@ -35,6 +35,7 @@ export default function Home() {
             </section>
             <section>
               <CardFilmList titleCard="Principales" position={0} numberOfElements={20}/>
+              <CardFilmList titleCard="Nominados al Globo de oro" isLarge={true}/>
               <CardFilmList titleCard="Drama y suspenso" position={20} numberOfElements={15}/>
               <CardFilmList titleCard="Destacados de Star" position={35} numberOfElements={15}/>
               <CardFilmList titleCard="Tendencias" position={50} numberOfElements={13}/>

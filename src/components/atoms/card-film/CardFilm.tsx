@@ -1,14 +1,17 @@
 interface Props {
   imageSource: string,
+  isLarge?: boolean,
 }
 
-function CardFilm({imageSource}: Props) {
+function CardFilm({imageSource, isLarge = false}: Props) {
 
   return (
 
-    <article className="card-film disney-shadow disney-outline-hover">
+    <article className={isLarge ?
+      "card-film disney-shadow disney-outline-hover disney-outline-hover--large" :
+      "card-film disney-shadow disney-outline-hover disney-outline-hover--medium"}>
       <img
-        className="card-film__image"
+        className={isLarge ? "card-film__image card-film__image--large":"card-film__image"}
         src={imageSource} alt=""/>
     </article>
 
