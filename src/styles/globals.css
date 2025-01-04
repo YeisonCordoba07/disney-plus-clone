@@ -113,11 +113,15 @@ body {
     margin-top: 20px;
     padding: 30px;
     font-weight: bold;
+    text-align: center;
 
 }
 
 
 @media (max-width: 767px) {
+    .footer-container{
+        width: 100%;
+    }
 
 }
 
