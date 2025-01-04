@@ -3,6 +3,7 @@
   display: flex;
   height: fit-content;
   overflow-y: visible;
+  margin-bottom: 15px;
 }
 
 
@@ -12,7 +13,7 @@
   width: 100%;
 
   gap: 20px;
-  padding: 10px 20px 44px 20px;
+  padding: 10px 20px 50px 20px;
   overflow-x: hidden;
   overflow-y: visible;
 
@@ -28,10 +29,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   height: 34px;
   position: absolute;
   bottom: 0;
+  padding: 10px 0;
 
   width: 100%;
 
@@ -39,6 +41,18 @@
 
 
 .slider__pagination-button{
+
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__pagination-button-style{
   border-radius: 50%;
   width: 8px;
   height: 8px;
@@ -50,5 +64,6 @@
 
   &--active{
     background-color: #fafafa;
+    transform: scale(1.25);
   }
 }
