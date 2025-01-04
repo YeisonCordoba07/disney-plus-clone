@@ -40,11 +40,38 @@ export default function Home() {
               <CardFilmList titleCard="Destacados de Star" position={35} numberOfElements={15}/>
               <CardFilmList titleCard="Tendencias" position={50} numberOfElements={13}/>
               <CardFilmList titleCard="Star Wars" position={63} numberOfElements={10}/>
-              <CardFilmList titleCard="Recomendaicones para ti" position={73} numberOfElements={14}/>
+              <CardFilmList titleCard="Recomendaciones para ti" position={73} numberOfElements={14}/>
             </section>
           </main>
 
           <footer className="footer">
+            <div className="footer-container">
+
+              <div className="footer__home">
+                <img src="/nav-icons/disney-logo.png" alt=""/>
+              </div>
+
+              <div className="footer__links">
+                <button>Terminos de uso</button>
+                <button>Políticas de cookies</button>
+                <button>Política de privacidad</button>
+                <button>Complemento Política de privacidad</button>
+                <button>Acuerdo de suscripción</button>
+                <button>Ayuda</button>
+                <button>Dispositivos compatibles</button>
+                <button>Acerca de Disney+</button>
+                <button>Publicidad personalizada</button>
+                <span>Disney+ es un servicio por suscripción de pago, su contenido está sujeto a
+                disponibilidad. El servicio Disney+ es comercializado por The Walt Disney Company
+              Colombia S.A., Calle 70 Bis No. 4 - 41, Bogotá D.C., Colombia, y el número de NIT es
+              800.246.937-1.</span>
+              </div>
+
+            </div>
+
+            <div className="footer__right">
+              <span>Hecho por Yeison Cordoba 2025.</span>
+            </div>
 
           </footer>
 

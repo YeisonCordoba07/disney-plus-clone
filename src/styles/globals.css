@@ -68,8 +68,68 @@ body {
 
 
 .footer {
-    height: 200vh;
+    background-color:#100c14;
+    margin-top: 100px;
+
 }
+
+.footer-container{
+    width: 500px;
+    margin: auto;
+
+}
+
+.footer__home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 19px;
+}
+.footer__home img{
+    width: 86px;
+    height: 48px;
+}
+
+.footer__links{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    color: #f9f9f9;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: -.1px;
+    line-height: 1.5;
+}
+
+.footer__links button{
+    padding: 10px 5px;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.footer__links span{
+    color: #cacaca;
+    text-align: center;
+    margin: 0 28px;
+
+}
+
+.footer__right{
+    background-color: purple;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px 20px 100px;
+    font-weight: bold;
+}
+
 
 
 
