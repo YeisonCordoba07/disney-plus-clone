@@ -3,7 +3,7 @@ import "@/components/atoms/nav-element/NavElement.scss";
 import "@/components/molecules/nav-bar/NavBar.scss";
 import "@/components/atoms/age-advisor/AgeAdvisor.scss";
 import "@/components/molecules/slider/Slider.scss";
-import "@/components/molecules/slider-item/SliderItem.scss";
+import "@/components/atoms/slider-item/SliderItem.scss";
 import "@/components/molecules/main-collections/MainCollections.scss";
 import "@/components/atoms/item-collection/ItemCollection.scss";
 import "@/components/atoms/card-film/CardFilm.scss";

@@ -1,4 +1,4 @@
-import {SliderItem} from "@/components/molecules/slider-item/SliderItem";
+import {SliderItem} from "@/components/atoms/slider-item/SliderItem";
 import MovieJson from "@/mock/slider-items.json";
 import {useEffect, useRef, useState} from "react";
 import {SectionButton} from "@/components/atoms/section-button/SectionButton";
