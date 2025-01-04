@@ -1,4 +1,4 @@
-import {NavElement} from "@/components/molecules/nav-element/NavElement";
+import {NavElement} from "@/components/atoms/nav-element/NavElement";
 import {useState} from "react";
 
 
@@ -28,7 +28,7 @@ function NavBar() {
 
         <div className="nav__current-account">
           <span className="nav__current-account__name">YEISON CORDOBA</span>
-          <img className="nav__current-account-image" src="/nav-icons/main-account.png" alt="" />
+          <img className="nav__current-account-image" src="/nav-icons/personal-main-account.jpeg" alt="" />
         </div>
 
 

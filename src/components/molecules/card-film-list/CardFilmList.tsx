@@ -10,7 +10,8 @@ interface Props {
   isLarge?: boolean,
 }
 
-function CardFilmList({titleCard, position, numberOfElements = 10, isLarge = false}: Props) {
+function CardFilmList({titleCard, position = 0, numberOfElements = 10, isLarge = false}: Props) {
+
 
   const filmsData = isLarge
     ? FilmsJson.filter((_item, index) => index >= 90)
@@ -54,9 +55,10 @@ function CardFilmList({titleCard, position, numberOfElements = 10, isLarge = fal
     if (!container) return;
 
     const handleResize = () => {
+      const cardFilmWidth: HTMLDivElement | null = container.querySelector(".card-film") || null;
       setScrollObjects({
         containerWidth: container.offsetWidth || 0,
-        cardWidth: container.querySelector(".card-film")?.offsetWidth || 0,
+        cardWidth: cardFilmWidth?.offsetWidth || 0,
       });
     };
 
@@ -73,7 +75,6 @@ function CardFilmList({titleCard, position, numberOfElements = 10, isLarge = fal
 
   return (
     <article className="card-film-list">
-
       <h4 className="card-film-list__title">{titleCard}</h4>
 
       <div className="card-film-list__wrapper">
@@ -99,6 +100,7 @@ function CardFilmList({titleCard, position, numberOfElements = 10, isLarge = fal
         />
 
       </div>
+
 
     </article>
   );
