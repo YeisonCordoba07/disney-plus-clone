@@ -11,18 +11,20 @@ function Slider() {
   const [currentId, setCurrentId] = useState(0);
 
 
-  // Aseguramos que el scroll inicial esté centrado
+
   useEffect(() => {
     if (listRef.current) {
       const container: HTMLDivElement = listRef.current;
-      const item = container.querySelector('.slider-item') as HTMLDivElement; // Aseguramos que es un HTMLElement
+      const item = container.querySelector('.slider-item') as HTMLDivElement;
       const itemWidth: number = item?.offsetWidth || 0;
       const gap: number = 20;
-      // Centramos en el segundo elemento (el primero visible completamente)
+
       container.scrollLeft = (itemWidth + gap) * 2;
       setCurrentId(movies[0].id);
     }
   }, []);
+
+
 
 
   const scrollToImage = useCallback((direction: 'prev' | 'next') => {
@@ -32,18 +34,15 @@ function Slider() {
     const container = listRef.current;
     const items: NodeListOf<HTMLDivElement> = container.querySelectorAll('.slider-item');
     const itemWidth = items[0]?.offsetWidth || 0;
-    const gap = 20; // El gap que tienes definido en CSS
+    const gap = 20; // Gap del CSS
     const scrollDistance = itemWidth + gap;
 
-    // Calculamos la dirección del scroll
     const scrollAmount = direction === 'next' ? scrollDistance : -scrollDistance;
     console.log(scrollAmount);
 
 
-    // Esperamos a que termine la animación
     setTimeout(() => {
       if (direction === 'next') {
-        // Movemos el primer elemento al final
         setMovies(prevMovies => {
           const firstMovie = prevMovies[0];
           return [...prevMovies.slice(1), firstMovie];
@@ -51,7 +50,6 @@ function Slider() {
 
 
       } else {
-        // Movemos el último elemento al principio
         setMovies(prevMovies => {
           const lastMovie = prevMovies[prevMovies.length - 1];
           return [lastMovie, ...prevMovies.slice(0, -1)];
@@ -70,7 +68,7 @@ function Slider() {
     }, 900);
 
 
-    // Hacemos el scroll suave
+
     container.scrollBy({
       left: scrollAmount,
       behavior: 'smooth',

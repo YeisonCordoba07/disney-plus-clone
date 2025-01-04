@@ -1,21 +1,21 @@
-.card-film-list{
+.card-film-list {
   display: flex;
   flex-direction: column;
 
-  &__title{
+  &__title {
     font-size: 20px;
     color: #cacaca;
     padding: var(--large-padding);
   }
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     position: relative;
     height: fit-content;
   }
 
 
-  &__container{
+  &__container {
     display: flex;
     gap: 20px;
 
@@ -29,23 +29,25 @@
 
 
 
-@media (min-width: 768px) and (max-width: 1439px){
-  .card-film-list__title{
+/* ---------------- Responsive ----------------*/
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .card-film-list__title {
     padding: var(--small-padding);
   }
 
-  .card-film-list__container{
+  .card-film-list__container {
     padding: 10px 40px 42px 40px;
   }
 }
 
 
-@media(max-width: 767px){
-  .card-film-list__title{
+@media(max-width: 767px) {
+  .card-film-list__title {
     padding: var(--small-padding);
   }
 
-  .card-film-list__container{
+  .card-film-list__container {
     padding: 10px 40px 42px 40px;
   }
 }

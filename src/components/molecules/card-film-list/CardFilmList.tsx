@@ -19,7 +19,7 @@ function CardFilmList({titleCard, position, numberOfElements = 10, isLarge = fal
 
 
   const listRef = useRef<HTMLDivElement | null>(null);
-  const [scrollObjects, setScrollObject] = useState({
+  const [scrollObjects, setScrollObjects] = useState({
     containerWidth: 0,
     cardWidth: 0,
   });
@@ -46,13 +46,15 @@ function CardFilmList({titleCard, position, numberOfElements = 10, isLarge = fal
   }
 
 
+
+
   useEffect(() => {
     const container = listRef.current;
 
     if (!container) return;
 
     const handleResize = () => {
-      setScrollObject({
+      setScrollObjects({
         containerWidth: container.offsetWidth || 0,
         cardWidth: container.querySelector(".card-film")?.offsetWidth || 0,
       });
@@ -67,8 +69,11 @@ function CardFilmList({titleCard, position, numberOfElements = 10, isLarge = fal
   }, []);
 
 
+
+
   return (
     <article className="card-film-list">
+
       <h4 className="card-film-list__title">{titleCard}</h4>
 
       <div className="card-film-list__wrapper">
@@ -88,14 +93,12 @@ function CardFilmList({titleCard, position, numberOfElements = 10, isLarge = fal
           )}
         </div>
 
-
         <SectionButton
           direction={"next"}
           scrollFunction={() => changeDirection("next")}
         />
 
       </div>
-
 
     </article>
   );

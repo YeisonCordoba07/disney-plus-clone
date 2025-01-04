@@ -29,13 +29,11 @@ $hidden-menu-color-border: #2c2c2c;
     align-items: center;
   }
 
-  &__elements-list--active {
-
-  }
 
   &__home-button {
     margin-right: 32px;
   }
+
 
   &__element {
     text-wrap: nowrap;
@@ -72,7 +70,8 @@ $hidden-menu-color-border: #2c2c2c;
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      &-plus{
+
+      &-plus {
         background-color: #2a2a2a;
         padding: 15px;
       }
@@ -87,14 +86,12 @@ $hidden-menu-color-border: #2c2c2c;
 
 @keyframes nav-shadow {
   0% {
-   // background-color: rgba(0, 0, 0, 0);
-    background: linear-gradient(rgba(48, 50, 62, 0.6) 0%,  rgba(0,0,0,0) 95%);
+    background: linear-gradient(rgba(48, 50, 62, 0.6) 0%, rgba(0, 0, 0, 0) 95%);
   }
   100% {
     background-color: black;
   }
 }
-
 
 
 .hidden-menu {
@@ -119,11 +116,11 @@ $hidden-menu-color-border: #2c2c2c;
   border-top: none;
   z-index: 50;
 
-    color: #a1a1a1;
-    font-family: "Open Sans", sans-serif;
-    font-size: 13px;
-    letter-spacing: -.1px;
-    line-height: 1.53;
+  color: #a1a1a1;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  letter-spacing: -.1px;
+  line-height: 1.53;
   font-weight: 500;
 
   &--active {
@@ -163,24 +160,10 @@ $hidden-menu-color-border: #2c2c2c;
   }
 }
 
-/*
-.nav__account-options:hover .hidden-menu{
-  display: flex;
-  background-color: $hidden-menu-background;
-  position: absolute;
-  gap: 16px;
-  flex-direction: column;
-  padding: 16px;
-  top: 80px;
-  right: 37px;
-  width: 240px;
-}
-.nav__account-options:hover{
-  background-color: $hidden-menu-background;
-}
-*/
 
 
+
+/* ---------------- Responsive ----------------*/
 @media(max-width: 1439px) {
   .nav__profile-name {
     display: none;

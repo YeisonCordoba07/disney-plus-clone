@@ -15,7 +15,7 @@
   border: none;
 
 
-  &:hover{
+  &:hover {
     opacity: 1;
   }
 
@@ -31,12 +31,20 @@
 }
 
 
-
-
-.section-button:hover.section-button--left{
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 100%);
+.section-button:hover.section-button--left {
+  background: linear-gradient(
+                  90deg,
+                  rgba(0, 0, 0, 0.3) 0%,
+                  rgba(0, 0, 0, 0.3) 40%,
+                  rgba(0, 0, 0, 0) 100%
+  );
 }
 
-.section-button:hover.section-button--right{
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 100%);
+.section-button:hover.section-button--right {
+  background: linear-gradient(
+                  -90deg,
+                  rgba(0, 0, 0, 0.3) 0%,
+                  rgba(0, 0, 0, 0.3) 40%,
+                  rgba(0, 0, 0, 0) 100%
+  );
 }

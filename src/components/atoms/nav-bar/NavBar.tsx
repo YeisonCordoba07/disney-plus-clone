@@ -1,6 +1,7 @@
 import {NavElement} from "@/components/molecules/nav-element/NavElement";
 import {useState} from "react";
 
+
 function NavBar() {
   const [showOptions, setShowOptions] = useState<boolean>(false);
 
@@ -26,7 +27,7 @@ function NavBar() {
         onClick={() => setShowOptions(!showOptions)}>
 
         <div className="nav__current-account">
-          <span className="nav__current-account__name">YEISON</span>
+          <span className="nav__current-account__name">YEISON CORDOBA</span>
           <img className="nav__current-account-image" src="/nav-icons/main-account.png" alt="" />
         </div>
 
@@ -34,20 +35,18 @@ function NavBar() {
         <div className={showOptions ? "hidden-menu--active hidden-menu" : "hidden-menu"}>
 
           <div className="hidden-menu__other-accounts-container">
+
             <div className="nav__current-account">
-              <img className="nav__current-account-image" src="/nav-icons/secondary-account.png"
-                   alt=""/>
+              <img className="nav__current-account-image" src="/nav-icons/secondary-account.png" alt=""/>
               <span className="nav__current-account__name">ACCOUNT 1</span>
             </div>
+
             <div className="nav__current-account">
               <img className="nav__current-account-image nav__current-account-image-plus" src="/nav-icons/large-plus-icon.svg"
                    alt=""/>
-
-
-
-
               <span className="nav__current-account__name">Crear perfil</span>
             </div>
+
           </div>
 
           <ul className="hidden-menu__options-container">
