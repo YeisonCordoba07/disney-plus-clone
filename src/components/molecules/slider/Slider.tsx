@@ -22,6 +22,7 @@ function Slider() {
 
     item.scrollIntoView({
       behavior: 'smooth',
+      block: 'nearest',
       inline: "center",
     });
 
