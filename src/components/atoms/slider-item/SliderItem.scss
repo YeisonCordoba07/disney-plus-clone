@@ -115,11 +115,19 @@
   }
 
   .slider-info__title-image{
-    width: 80%;
+    width: 100%;
   }
 
   .slider-info__details-container{
     align-items: center;
+  }
+
+  .slider-info__text-episodes{
+    text-align: center;
+  }
+
+  .slider-info__advisor-category-container{
+    flex-direction: column-reverse;
   }
 }
 
