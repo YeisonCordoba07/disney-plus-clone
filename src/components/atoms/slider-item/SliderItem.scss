@@ -104,6 +104,26 @@
 }
 
 
+@media(max-width: 767px){
+  .slider-info{
+    justify-content: end;
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 30px;
+    bottom: 20px;
+    align-items: center;
+  }
+
+  .slider-info__title-image{
+    width: 80%;
+  }
+
+  .slider-info__details-container{
+    align-items: center;
+  }
+}
+
+
 
 
 
